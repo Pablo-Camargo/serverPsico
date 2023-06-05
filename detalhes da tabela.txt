@@ -1,0 +1,15 @@
+Com base nas informações fornecidas, podemos criar algumas tabelas no banco de dados para representar os usuários (psicólogos e pacientes), as sessões e os textos destacados em cada sessão. Aqui está uma sugestão de estrutura de tabelas:
+
+Tabela de usuários:
+
+users: armazena informações sobre os usuários (psicólogos e pacientes). Pode incluir campos como id, name, email, password, role (para distinguir entre psicólogos e pacientes) e outros campos relevantes.
+Tabela de pacientes:
+
+patients: armazena informações específicas dos pacientes, como id, user_id (chave estrangeira referenciando a tabela users), dob (data de nascimento) e outros campos relevantes.
+Tabela de sessões:
+
+sessions: armazena informações sobre as sessões. Pode incluir campos como id, patient_id (chave estrangeira referenciando a tabela patients), psychologist_id (chave estrangeira referenciando a tabela users para identificar o psicólogo responsável), date (data da sessão) e outros campos relevantes.
+Tabela de textos:
+
+texts: armazena os textos destacados em cada sessão. Pode incluir campos como id, session_id (chave estrangeira referenciando a tabela sessions), content (conteúdo do texto) e outros campos relevantes.
+Com essa estrutura básica, você poderá relacionar os psicólogos com os pacientes, registrar as sessões e armazenar os textos destacados em cada sessão. Lembrando que essas são sugestões iniciais e você pode ajustar a estrutura de acordo com as necessidades específicas do seu sistema.
